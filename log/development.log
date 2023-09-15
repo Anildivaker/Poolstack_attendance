@@ -1,0 +1,1176 @@
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+Started GET "/admin" for ::1 at 2023-09-15 08:46:50 +0530
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.8.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.8.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for ::1 at 2023-09-15 08:46:51 +0530
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.8.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.8.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (16.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateAdminUsers (20180228204851)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180228204851"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveAdminComments (20180228204854)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_type" varchar, "resource_id" integer, "author_type" varchar, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180228204854"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRoleToAdminUsers (20180228204953)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "admin_users" ADD "role" integer(1) DEFAULT 0 NOT NULL[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180228204953"]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveAdminManagedResources (20180228204954)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "active_admin_managed_resources" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar NOT NULL, "action" varchar NOT NULL, "name" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "active_admin_managed_resources_index" ON "active_admin_managed_resources" ("class_name", "action", "name")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180228204954"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveAdminPermissions (20180228204955)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "active_admin_permissions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "managed_resource_id" integer NOT NULL, "role" integer(1) DEFAULT 0 NOT NULL, "state" integer(1) DEFAULT 0 NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "active_admin_permissions_index" ON "active_admin_permissions" ("managed_resource_id", "role")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180228204955"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-15 03:17:04.945731"], ["updated_at", "2023-09-15 03:17:04.945731"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "guest@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "guest@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.4ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "guest@example.com"], ["encrypted_password", "$2a$11$NSj7VAR7HsOX9ioE9MG8sO/hciClj5bNqv6oq.P.lAuVaEVqyriq6"], ["created_at", "2023-09-15 03:18:03.177558"], ["updated_at", "2023-09-15 03:18:03.177558"]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "support@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "support@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.3ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at", "role") VALUES (?, ?, ?, ?, ?)[0m  [["email", "support@example.com"], ["encrypted_password", "$2a$11$85sRDsBbJ8I74HqHulKkEuxa8.WKb7bo.J/VfuFpwWK66xSvmxZIq"], ["created_at", "2023-09-15 03:18:03.325055"], ["updated_at", "2023-09-15 03:18:03.325055"], ["role", 1]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "staff@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "staff@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (1.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at", "role") VALUES (?, ?, ?, ?, ?)[0m  [["email", "staff@example.com"], ["encrypted_password", "$2a$11$WBZecYVtX4FYK4JZONMI3ePd4tPeCmgeqxV.njw4uqcmJPtbdNaUy"], ["created_at", "2023-09-15 03:18:03.495486"], ["updated_at", "2023-09-15 03:18:03.495486"], ["role", 2]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "manager@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "manager@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.9ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at", "role") VALUES (?, ?, ?, ?, ?)[0m  [["email", "manager@example.com"], ["encrypted_password", "$2a$11$IfVD8yxREoFYRVIaiAL3pOUPlzViDRhGiFkHaQmLpk00nuWN6d5ZK"], ["created_at", "2023-09-15 03:18:03.674096"], ["updated_at", "2023-09-15 03:18:03.674096"], ["role", 3]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (1.0ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at", "role") VALUES (?, ?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$kYVlTWqAeb8J8Ybh2r.iP.jX/.cS5awU8.hVDePXp41zz4ow.iMf2"], ["created_at", "2023-09-15 03:18:03.862744"], ["updated_at", "2023-09-15 03:18:03.862744"], ["role", 99]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+Started GET "/admin" for ::1 at 2023-09-15 08:48:59 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2023-09-15 08:48:59 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (0.9ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (30.6ms)
+Completed 200 OK in 2320ms (Views: 2299.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-15 08:49:28 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nxgw00Rxk4lirogx7doGquTfxsrJSABn8VVaAyJyIbmeclZQ3T6YTMRoqqxTIT1nyLj8FSNF7kIOicv0jL7kTQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Update (0.5ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2023-09-15 03:19:28.828367"], ["last_sign_in_at", "2023-09-15 03:19:28.828367"], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2023-09-15 03:19:28.829238"], ["id", 5]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 208ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/admin" for ::1 at 2023-09-15 08:49:28 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (96.1ms)
+Completed 200 OK in 105ms (Views: 98.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/permissions" for ::1 at 2023-09-15 08:49:32 +0530
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (118.2ms)
+Completed 200 OK in 149ms (Views: 121.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2023-09-15 08:49:44 +0530
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 99]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (150.7ms)
+Completed 200 OK in 163ms (Views: 156.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/permissions" for ::1 at 2023-09-15 08:49:50 +0530
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (84.6ms)
+Completed 200 OK in 93ms (Views: 87.6ms | ActiveRecord: 1.1ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTimeSheets (20230915032023)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "time_sheets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230915032023"]]
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+Started GET "/admin/permissions" for ::1 at 2023-09-15 08:50:50 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (358.0ms)
+Completed 200 OK in 400ms (Views: 362.8ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/admin/permissions/reload" for ::1 at 2023-09-15 08:50:59 +0530
+Processing by Admin::PermissionsController#reload as HTML
+  Parameters: {"authenticity_token"=>"jN2osCkMJW6XSvIcRLb7Bz17Tx24J88gO8OzKfSRZzDImOScGox2yCYhKoFaG1WyQXh0mh92DDxA/NV1LJbScw=="}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "read"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.7ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "AdminUser"], ["action", "read"], ["name", "AdminUser"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "update"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.3ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "AdminUser"], ["action", "update"], ["name", "AdminUser"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "destroy"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.3ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "AdminUser"], ["action", "destroy"], ["name", "AdminUser"]]
+  [1m[36mActiveAdmin::ManagedResource Load (1.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "create"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "AdminUser"], ["action", "create"], ["name", "AdminUser"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "batch_action"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "AdminUser"], ["action", "batch_action"], ["name", "AdminUser"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Page"], ["name", "Dashboard"], ["action", "read"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "ActiveAdmin::Page"], ["action", "read"], ["name", "Dashboard"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Permission"], ["name", "Permission"], ["action", "read"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "ActiveAdmin::Permission"], ["action", "read"], ["name", "Permission"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Permission"], ["name", "Permission"], ["action", "reload"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "ActiveAdmin::Permission"], ["action", "reload"], ["name", "Permission"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Permission"], ["name", "Permission"], ["action", "batch_action"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.4ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "ActiveAdmin::Permission"], ["action", "batch_action"], ["name", "Permission"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Comment"], ["name", "Comment"], ["action", "create"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "ActiveAdmin::Comment"], ["action", "create"], ["name", "Comment"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Comment"], ["name", "Comment"], ["action", "read"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.3ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "ActiveAdmin::Comment"], ["action", "read"], ["name", "Comment"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Comment"], ["name", "Comment"], ["action", "destroy"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "ActiveAdmin::Comment"], ["action", "destroy"], ["name", "Comment"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources"[0m
+  [1m[36mActiveAdmin::ManagedResource Load (0.5ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 1], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 1], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 1], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 1], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 1], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 1], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 1], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 1], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 1], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 2], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 2], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 2], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 2], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 2], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 2], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 2], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 2], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 2], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 3], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 3], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 3], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 3], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 3], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 3], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 3], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 3], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 3], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 4], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.3ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 4], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 4], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 4], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 4], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 4], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 4], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 4], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 4], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 5], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 5], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 5], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 5], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 5], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 5], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 5], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 5], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 5], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 6], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 6], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 6], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 6], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 6], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 6], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 6], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 6], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 6], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 7], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 7], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 7], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 7], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 7], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 7], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 7], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 7], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 7], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 8], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.4ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 8], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 8], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 8], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 8], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 8], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 8], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 8], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 8], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 9], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 9], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 9], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 9], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 9], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 9], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 9], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 9], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 9], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 10], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 10], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 10], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 10], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.3ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 10], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 10], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 10], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 10], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 10], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 11], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 11], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 11], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 11], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 11], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 11], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 11], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 11], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 11], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 12], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 12], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 12], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 12], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 12], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 12], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 12], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 12], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.2ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 12], ["role", 3]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/permissions
+Completed 302 Found in 227ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/admin/permissions" for ::1 at 2023-09-15 08:50:59 +0530
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::Permission Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.3ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 12], ["id", 11], ["id", 10], ["id", 9], ["id", 8], ["id", 7], ["id", 6], ["id", 5], ["id", 4], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (210.3ms)
+Completed 200 OK in 219ms (Views: 210.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/comments" for ::1 at 2023-09-15 08:51:00 +0530
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (109.8ms)
+Completed 200 OK in 130ms (Views: 113.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/permissions" for ::1 at 2023-09-15 08:51:01 +0530
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::Permission Load (0.4ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.5ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 12], ["id", 11], ["id", 10], ["id", 9], ["id", 8], ["id", 7], ["id", 6], ["id", 5], ["id", 4], ["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (123.3ms)
+Completed 200 OK in 142ms (Views: 129.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/permissions?order=id_desc&page=2" for ::1 at 2023-09-15 08:51:17 +0530
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"order"=>"id_desc", "page"=>"2"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 30]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 30]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 30]]
+  [1m[36mActiveAdmin::Permission Load (0.4ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 30]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.4ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (111.2ms)
+Completed 200 OK in 131ms (Views: 120.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/permissions?order=id_desc" for ::1 at 2023-09-15 08:51:23 +0530
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"order"=>"id_desc"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::Permission Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 12], ["id", 11], ["id", 10], ["id", 9], ["id", 8], ["id", 7], ["id", 6], ["id", 5], ["id", 4], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (124.0ms)
+Completed 200 OK in 134ms (Views: 127.1ms | ActiveRecord: 1.5ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+Started GET "/admin/permissions?order=id_desc" for ::1 at 2023-09-15 08:53:33 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"order"=>"id_desc"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::Permission Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 12], ["id", 11], ["id", 10], ["id", 9], ["id", 8], ["id", 7], ["id", 6], ["id", 5], ["id", 4], ["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (438.1ms)
+Completed 200 OK in 477ms (Views: 440.9ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/admin/permissions/reload" for ::1 at 2023-09-15 08:53:34 +0530
+Processing by Admin::PermissionsController#reload as HTML
+  Parameters: {"authenticity_token"=>"YIDNliXimEa+zovmW3aQqxzV6cqTpdPAI04WgEsk8nEkxYG6FmLL4A+lU3tF2z4eYNbSTTT0ENxYcXDckyNHMg=="}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "read"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "update"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "destroy"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.4ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "create"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "AdminUser"], ["name", "AdminUser"], ["action", "batch_action"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Page"], ["name", "Dashboard"], ["action", "read"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Permission"], ["name", "Permission"], ["action", "read"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Permission"], ["name", "Permission"], ["action", "reload"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Permission"], ["name", "Permission"], ["action", "batch_action"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "TimeSheet"], ["name", "TimeSheet"], ["action", "read"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.8ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "TimeSheet"], ["action", "read"], ["name", "TimeSheet"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "TimeSheet"], ["name", "TimeSheet"], ["action", "update"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "TimeSheet"], ["action", "update"], ["name", "TimeSheet"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "TimeSheet"], ["name", "TimeSheet"], ["action", "destroy"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "TimeSheet"], ["action", "destroy"], ["name", "TimeSheet"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "TimeSheet"], ["name", "TimeSheet"], ["action", "create"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "TimeSheet"], ["action", "create"], ["name", "TimeSheet"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "TimeSheet"], ["name", "TimeSheet"], ["action", "batch_action"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_managed_resources" ("class_name", "action", "name") VALUES (?, ?, ?)[0m  [["class_name", "TimeSheet"], ["action", "batch_action"], ["name", "TimeSheet"]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Comment"], ["name", "Comment"], ["action", "create"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Comment"], ["name", "Comment"], ["action", "read"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."class_name" = ? AND "active_admin_managed_resources"."name" = ? AND "active_admin_managed_resources"."action" = ? LIMIT ?[0m  [["class_name", "ActiveAdmin::Comment"], ["name", "Comment"], ["action", "destroy"], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources"[0m
+  [1m[36mActiveAdmin::ManagedResource Load (0.3ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[36mActiveAdmin::Permission Load (0.3ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 1], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 1], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 1], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 2], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 2], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 2], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 3], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 3], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 3], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 4], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 4], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 4], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 5], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 5], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 5], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 6], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 6], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 6], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 7], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 7], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 7], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 8], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 8], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 8], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 9], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 9], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 9], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 10], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 10], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 10], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 11], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.4ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 11], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 11], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 12], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 12], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 12], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 13], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 13], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 13], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 13], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 13], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 13], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.4ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 13], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 13], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 13], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 14], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 14], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 14], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 14], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 14], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 14], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 14], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 14], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 14], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 15], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 15], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 15], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 15], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 15], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 15], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 15], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 15], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 15], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 16], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 16], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 16], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 16], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 16], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 16], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 16], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 16], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 16], ["role", 3]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 17], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 17], ["role", 1], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 17], ["role", 1]]
+  [1m[36mActiveAdmin::Permission Load (0.0ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 17], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 17], ["role", 2], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 17], ["role", 2]]
+  [1m[36mActiveAdmin::Permission Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 17], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.1ms)[0m  [1m[34mSELECT  "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_permissions" WHERE "active_admin_permissions"."managed_resource_id" = ? AND "active_admin_permissions"."role" = ? LIMIT ?[0m  [["managed_resource_id", 17], ["role", 3], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Create (0.1ms)[0m  [1m[32mINSERT INTO "active_admin_permissions" ("managed_resource_id", "role") VALUES (?, ?)[0m  [["managed_resource_id", 17], ["role", 3]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/permissions?order=id_desc
+Completed 302 Found in 139ms (ActiveRecord: 26.3ms)
+
+
+Started GET "/admin/permissions?order=id_desc" for ::1 at 2023-09-15 08:53:35 +0530
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"order"=>"id_desc"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::Permission Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 17], ["id", 16], ["id", 15], ["id", 14], ["id", 13], ["id", 12], ["id", 11], ["id", 10], ["id", 9], ["id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (174.9ms)
+Completed 200 OK in 186ms (Views: 178.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/admin/permissions/batch_action" for ::1 at 2023-09-15 08:54:38 +0530
+Processing by Admin::PermissionsController#batch_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EU+psGCJBs3arbfRxOKzKaN5vVIHVtHxNKVZAompCzRVCuWcUwlVa2vGb0zaTx2c33qG1aAHEu1Pmj9eUa6+dw==", "batch_action"=>"can", "collection_selection"=>["51"]}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Update All (14.0ms)[0m  [1m[33mUPDATE "active_admin_permissions" SET "state" = 1 WHERE "active_admin_permissions"."id" = ?[0m  [["id", 51]]
+Redirected to http://localhost:3000/admin/permissions?order=id_desc
+Completed 302 Found in 33ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/admin/permissions?order=id_desc" for ::1 at 2023-09-15 08:54:38 +0530
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"order"=>"id_desc"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::Permission Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 17], ["id", 16], ["id", 15], ["id", 14], ["id", 13], ["id", 12], ["id", 11], ["id", 10], ["id", 9], ["id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (152.0ms)
+Completed 200 OK in 163ms (Views: 154.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/time_sheets" for ::1 at 2023-09-15 08:54:49 +0530
+Processing by Admin::TimeSheetsController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (88.0ms)
+Completed 200 OK in 99ms (Views: 91.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/permissions" for ::1 at 2023-09-15 08:54:50 +0530
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::Permission Load (0.3ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.2ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 17], ["id", 16], ["id", 15], ["id", 14], ["id", 13], ["id", 12], ["id", 11], ["id", 10], ["id", 9], ["id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (126.8ms)
+Completed 200 OK in 135ms (Views: 129.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/admin/permissions/batch_action" for ::1 at 2023-09-15 08:55:04 +0530
+Processing by Admin::PermissionsController#batch_action as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BoTo4r4whQ1DeoMPw6msgPQn/tgR2Fu/SF4dAL2Qj85CwaTOjbDWq/IRW5LdBAI1iCTFX7aJmKMzYXtcZZc6jQ==", "batch_action"=>"cannot", "collection_selection"=>["51"]}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveAdmin::Permission Update All (14.2ms)[0m  [1m[33mUPDATE "active_admin_permissions" SET "state" = 0 WHERE "active_admin_permissions"."id" = ?[0m  [["id", 51]]
+Redirected to http://localhost:3000/admin/permissions
+Completed 302 Found in 19ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/admin/permissions" for ::1 at 2023-09-15 08:55:04 +0530
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::Permission Load (0.2ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.3ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 17], ["id", 16], ["id", 15], ["id", 14], ["id", 13], ["id", 12], ["id", 11], ["id", 10], ["id", 9], ["id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (146.1ms)
+Completed 200 OK in 156ms (Views: 147.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/logout" for ::1 at 2023-09-15 08:57:37 +0530
+Processing by ActiveAdmin::Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AZ/C3bQtmyQyTeg/8VInz9qsdnOily3FJpVZdDCN7aFF2o7xh63IgoMmMKLv/4l6pq9N9AXG7tldqj8o6IpY4g=="}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 17ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for ::1 at 2023-09-15 08:57:38 +0530
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2023-09-15 08:57:38 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (21.4ms)
+Completed 200 OK in 91ms (Views: 88.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-15 08:58:30 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KudsW5Z2IE4Px2pDrwncdqo/bJgF4r27lndms/W7kQNVFfAq9/vVyYZqGgz5dtoE+ya2jpXyq2Bhcg5B02dJHA==", "admin_user"=>{"email"=>"staff@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "staff@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Update (0.8ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2023-09-15 03:28:30.524730"], ["last_sign_in_at", "2023-09-15 03:28:30.524730"], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2023-09-15 03:28:30.525267"], ["id", 3]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 197ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/admin" for ::1 at 2023-09-15 08:58:30 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[34mSELECT "active_admin_permissions"."id" AS t0_r0, "active_admin_permissions"."managed_resource_id" AS t0_r1, "active_admin_permissions"."role" AS t0_r2, "active_admin_permissions"."state" AS t0_r3, "active_admin_managed_resources"."id" AS t1_r0, "active_admin_managed_resources"."class_name" AS t1_r1, "active_admin_managed_resources"."action" AS t1_r2, "active_admin_managed_resources"."name" AS t1_r3 FROM "active_admin_permissions" LEFT OUTER JOIN "active_admin_managed_resources" ON "active_admin_managed_resources"."id" = "active_admin_permissions"."managed_resource_id"[0m
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (74.7ms)
+Completed 200 OK in 86ms (Views: 76.9ms | ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+Started GET "/admin" for ::1 at 2023-09-15 08:59:42 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[34mSELECT "active_admin_permissions"."id" AS t0_r0, "active_admin_permissions"."managed_resource_id" AS t0_r1, "active_admin_permissions"."role" AS t0_r2, "active_admin_permissions"."state" AS t0_r3, "active_admin_managed_resources"."id" AS t1_r0, "active_admin_managed_resources"."class_name" AS t1_r1, "active_admin_managed_resources"."action" AS t1_r2, "active_admin_managed_resources"."name" AS t1_r3 FROM "active_admin_permissions" LEFT OUTER JOIN "active_admin_managed_resources" ON "active_admin_managed_resources"."id" = "active_admin_permissions"."managed_resource_id"[0m
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (366.1ms)
+Completed 200 OK in 427ms (Views: 373.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/logout" for ::1 at 2023-09-15 08:59:57 +0530
+Processing by ActiveAdmin::Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w9KTIdH7cOjmxGUVYDje5HXFjWFuEb2bRPKgtOYUYaOJ3N0QVlBh5FKREigDLMDBSgee0bl6X1qg1huT0a/+nA=="}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/admin" for ::1 at 2023-09-15 08:59:57 +0530
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2023-09-15 08:59:57 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (44.1ms)
+Completed 200 OK in 157ms (Views: 154.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-15 09:00:19 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SSsyCuSO8XImiKmmvclTmpGJY2YX3Scy1YbLELnnsnqBdNtib5aysN+qRrnR/vZFJ9xxrIfYLen3lT+CgO438g==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Update (0.4ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2023-09-15 03:30:20.009522"], ["sign_in_count", 2], ["updated_at", "2023-09-15 03:30:20.010129"], ["id", 5]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 215ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/admin" for ::1 at 2023-09-15 09:00:20 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (114.0ms)
+Completed 200 OK in 120ms (Views: 115.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2023-09-15 09:00:25 +0530
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 99]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (159.9ms)
+Completed 200 OK in 171ms (Views: 162.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/admin_users/new" for ::1 at 2023-09-15 09:00:28 +0530
+Processing by Admin::AdminUsersController#new as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/new.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/new.html.arb (84.3ms)
+Completed 200 OK in 102ms (Views: 92.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/admin_users?scope=guest" for ::1 at 2023-09-15 10:18:48 +0530
+Processing by Admin::AdminUsersController#index as HTML
+  Parameters: {"scope"=>"guest"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 99]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 0], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 0], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 0], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."role" = ? ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["role", 0], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (87.2ms)
+Completed 200 OK in 96ms (Views: 90.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/admin_users?scope=support" for ::1 at 2023-09-15 10:18:50 +0530
+Processing by Admin::AdminUsersController#index as HTML
+  Parameters: {"scope"=>"support"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 99]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."role" = ? ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["role", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (94.0ms)
+Completed 200 OK in 105ms (Views: 99.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/admin_users?scope=staff" for ::1 at 2023-09-15 10:18:52 +0530
+Processing by Admin::AdminUsersController#index as HTML
+  Parameters: {"scope"=>"staff"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 99]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 2], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 2], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 2]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 2], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."role" = ? ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["role", 2], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (93.5ms)
+Completed 200 OK in 111ms (Views: 102.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/admin_users?scope=manager" for ::1 at 2023-09-15 10:18:54 +0530
+Processing by Admin::AdminUsersController#index as HTML
+  Parameters: {"scope"=>"manager"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 99]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 3]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."role" = ? ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["role", 3], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (100.7ms)
+Completed 200 OK in 119ms (Views: 108.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/admin_users?scope=admin" for ::1 at 2023-09-15 10:18:56 +0530
+Processing by Admin::AdminUsersController#index as HTML
+  Parameters: {"scope"=>"admin"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 99]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 99], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 99], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users" WHERE "admin_users"."role" = ?[0m  [["role", 99]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" WHERE "admin_users"."role" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["role", 99], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."role" = ? ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["role", 99], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (104.7ms)
+Completed 200 OK in 113ms (Views: 107.0ms | ActiveRecord: 1.6ms)
+
+
