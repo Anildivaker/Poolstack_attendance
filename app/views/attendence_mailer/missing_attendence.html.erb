@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header">
+    Poolstack Attendence System
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Hi <%= @user.name %></p>
+      <p>There has been a penalization of 1 of leave for Missing Attendence. Please be cautious in future.</p>
+      <b>leave Deduction Details</b>
+      <hr> 
+      <p>Penalization Date: <%= @date %></p>
+      <p>Penalization reason: Missing Attendance</p>
+      <p>Leave Type Deducted: Unpaid Leave</p>
+      <hr>
+      <p>
+        In case you might have any question related to this deduction, please reach out to your Reporting manager or Hr manager for more clairty.
+      </p>
+      <p>Regards,</p>
+      <p>Poolstack Technologies.</p>
+
+      <hr>
+    </blockquote>
+  </div>
+</div>

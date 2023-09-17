@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_15_032023) do
+ActiveRecord::Schema.define(version: 2023_09_16_113945) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -54,13 +54,20 @@ ActiveRecord::Schema.define(version: 2023_09_15_032023) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "role", limit: 1, default: 0, null: false
+    t.string "name"
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
   create_table "time_sheets", force: :cascade do |t|
+    t.date "date"
+    t.time "login_time"
+    t.time "logout_time"
+    t.integer "admin_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_present", default: false
+    t.index ["admin_user_id"], name: "index_time_sheets_on_admin_user_id"
   end
 
 end
