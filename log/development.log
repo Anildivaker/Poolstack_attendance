@@ -10076,3 +10076,471 @@ Processing by Admin::TimeSheetsController#edit as HTML
 Completed 200 OK in 140ms (Views: 128.7ms | ActiveRecord: 1.3ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+Started GET "/" for ::1 at 2023-09-18 11:27:50 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/railties-5.2.8.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/railties-5.2.8.1/lib/rails/templates/rails/welcome/index.html.erb (4.8ms)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2023-09-18 11:27:54 +0530
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2023-09-18 11:27:54 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (29.1ms)
+Completed 200 OK in 426ms (Views: 405.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:28:06 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"elHcYLjrsQNQz+OIGWqno/j8h0a0GuJwvF0zI8R3MrBnVf86ZRvA7zLIntD+LE9gUxH0mbVGSfLc/pun+kZeBw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.5ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"elHcYLjrsQNQz+OIGWqno/j8h0a0GuJwvF0zI8R3MrBnVf86ZRvA7zLIntD+LE9gUxH0mbVGSfLc/pun+kZeBw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.2ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (20.4ms)
+Completed 200 OK in 327ms (Views: 157.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:29:08 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8hmvKvV2S/XNXE2Hfv+Sp/OrEzls4wJyA3cpQ0YUmB/vHYxwKIY6Ga9bMN+ZuXpkWEZg5m2/qfBj1IHHeCX0qA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8hmvKvV2S/XNXE2Hfv+Sp/OrEzls4wJyA3cpQ0YUmB/vHYxwKIY6Ga9bMN+ZuXpkWEZg5m2/qfBj1IHHeCX0qA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.0ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (19.5ms)
+Completed 200 OK in 296ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:29:15 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X2Yu+3khjdxdJyoPuxuy1f52nCYn32guapYHAuLBIWZCYg2hpNH8MD8gV1dcXVoWVZvv+SaDw6wKNa+G3PBN0Q==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X2Yu+3khjdxdJyoPuxuy1f52nCYn32guapYHAuLBIWZCYg2hpNH8MD8gV1dcXVoWVZvv+SaDw6wKNa+G3PBN0Q==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (18.0ms)
+Completed 200 OK in 257ms (Views: 82.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:29:22 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A2tLT6cKmyb0Agd4P/SJVWtbdYqmq6YhJ7X9ibLKM9Qeb2gVevrqypYFeiDYsmGWwLYGVaf3DaNHFlUNjPtfYw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.3ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A2tLT6cKmyb0Agd4P/SJVWtbdYqmq6YhJ7X9ibLKM9Qeb2gVevrqypYFeiDYsmGWwLYGVaf3DaNHFlUNjPtfYw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (0.9ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (18.0ms)
+Completed 200 OK in 268ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:29:30 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rWKdsl4XH8SiA8NEquCpnlkDOL6hfUf/pzK9DZtVx4iwZr7og+duKMAEvhxNpkFd8u5LYaAh7H3HkRWJpWSrPw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rWKdsl4XH8SiA8NEquCpnlkDOL6hfUf/pzK9DZtVx4iwZr7og+duKMAEvhxNpkFd8u5LYaAh7H3HkRWJpWSrPw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.2ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (18.3ms)
+Completed 200 OK in 262ms (Views: 90.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:29:35 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Ho9RW146MsFYHAYIB6/HXN4rRKPLY58I3QT2NrTtoXxfh4fsIiZJ2dnDUDHWFfe2JXezY5xJf5D17tc5OLaMg==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Ho9RW146MsFYHAYIB6/HXN4rRKPLY58I3QT2NrTtoXxfh4fsIiZJ2dnDUDHWFfe2JXezY5xJf5D17tc5OLaMg==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (0.9ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (17.4ms)
+Completed 200 OK in 259ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:29:46 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yg0twslreO5N5IoGDzXMLQ7xpDcbmQmShoF83Z4+SGjXCQ6YFJsJAi/j917ocyTupRzX6BrFohDmItRZoA8k3w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yg0twslreO5N5IoGDzXMLQ7xpDcbmQmShoF83Z4+SGjXCQ6YFJsJAi/j917ocyTupRzX6BrFohDmItRZoA8k3w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.0ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (15.3ms)
+Completed 200 OK in 248ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:30:24 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"loNGyTfQeucJwhLvJ0ct/+vURssVm8mYuZ5r6zAsKKaLh2WT6iALC2vFb7fAAcU8QDk1FBTHYhrZPcNvDh1EEQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"loNGyTfQeucJwhLvJ0ct/+vURssVm8mYuZ5r6zAsKKaLh2WT6iALC2vFb7fAAcU8QDk1FBTHYhrZPcNvDh1EEQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.0ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (18.7ms)
+Completed 200 OK in 265ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:30:28 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G1PjojgUOrhhlJztlAsk+IEygm51VNjhUOtzHMvpiHAGV8D45eRLVAOT4bVzTcw7Kt/xsXQIc2MwSNuY9djkxw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.7ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G1PjojgUOrhhlJztlAsk+IEygm51VNjhUOtzHMvpiHAGV8D45eRLVAOT4bVzTcw7Kt/xsXQIc2MwSNuY9djkxw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (0.9ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (18.2ms)
+Completed 200 OK in 263ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:30:40 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G1PjojgUOrhhlJztlAsk+IEygm51VNjhUOtzHMvpiHAGV8D45eRLVAOT4bVzTcw7Kt/xsXQIc2MwSNuY9djkxw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G1PjojgUOrhhlJztlAsk+IEygm51VNjhUOtzHMvpiHAGV8D45eRLVAOT4bVzTcw7Kt/xsXQIc2MwSNuY9djkxw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (0.9ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (15.2ms)
+Completed 200 OK in 269ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:30:46 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4g734/s8Xjwb4Tj4wqXS0Y9dhnpzINiNURV9eOElVSGjBiFUhyAlJJo+bsETH+I7dAFxuiQKOBV5/1x3bX54w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4g734/s8Xjwb4Tj4wqXS0Y9dhnpzINiNURV9eOElVSGjBiFUhyAlJJo+bsETH+I7dAFxuiQKOBV5/1x3bX54w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (0.8ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (18.6ms)
+Completed 200 OK in 245ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? AND "admin_users"."id" != ? LIMIT ?[0m  [["email", "admin@example.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[36mAdminUser Update (1.2ms)[0m  [1m[33mUPDATE "admin_users" SET "email" = ?, "encrypted_password" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$ZDUdKjKeJFRdvXRGSBcch.pi5uxgnk0eHxL043ibGifkReE6sR8Oa"], ["updated_at", "2023-09-18 06:02:32.457833"], ["id", 6]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? AND "admin_users"."id" != ? LIMIT ?[0m  [["email", "admin@example.com"], ["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? AND "admin_users"."id" != ? LIMIT ?[0m  [["email", "admin@example.com"], ["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@domain.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@domain.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Update (0.9ms)[0m  [1m[33mUPDATE "admin_users" SET "encrypted_password" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["encrypted_password", "$2a$11$69WjyYqqcUOqxq95///3ie7hQ9tJcFQ7zV0h4/JLx6fHyZ7rQ0OUO"], ["updated_at", "2023-09-18 06:04:56.890217"], ["id", 6]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/admin/login" for ::1 at 2023-09-18 11:35:29 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4g734/s8Xjwb4Tj4wqXS0Y9dhnpzINiNURV9eOElVSGjBiFUhyAlJJo+bsETH+I7dAFxuiQKOBV5/1x3bX54w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 193ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m4g734/s8Xjwb4Tj4wqXS0Y9dhnpzINiNURV9eOElVSGjBiFUhyAlJJo+bsETH+I7dAFxuiQKOBV5/1x3bX54w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.0ms)
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (15.9ms)
+Completed 200 OK in 275ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2023-09-18 11:35:33 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ETG5mjpiLnqC9zuj6GDRM74oJo2dnx3k2HKx6Hk3SUAMNZrA55JfluDwRvsPJjnwFcVVUpzDtma40RlsRwYl9w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Update (0.6ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2023-09-18 06:05:33.300859"], ["last_sign_in_at", "2023-09-17 10:03:42.186907"], ["sign_in_count", 9], ["updated_at", "2023-09-18 06:05:33.302056"], ["id", 6]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 205ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/admin" for ::1 at 2023-09-18 11:35:33 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (73.0ms)
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/time_sheets" for ::1 at 2023-09-18 11:35:41 +0530
+Processing by Admin::TimeSheetsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "time_sheets"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "time_sheets"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mTimeSheet Load (5.8ms)[0m  [1m[34mSELECT  "time_sheets".* FROM "time_sheets" ORDER BY "time_sheets"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (147.5ms)
+Completed 200 OK in 175ms (Views: 146.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/admin/time_sheets" for ::1 at 2023-09-18 12:05:05 +0530
+Processing by Admin::TimeSheetsController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "time_sheets"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "time_sheets"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mTimeSheet Load (0.3ms)[0m  [1m[34mSELECT  "time_sheets".* FROM "time_sheets" ORDER BY "time_sheets"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (119.9ms)
+Completed 200 OK in 135ms (Views: 124.1ms | ActiveRecord: 2.3ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/poolstak/active_admin_role_sample/app/models/application_record.rb:1)
+Started GET "/admin/time_sheets" for ::1 at 2023-09-18 12:05:52 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::TimeSheetsController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "time_sheets"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "time_sheets"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mTimeSheet Load (0.2ms)[0m  [1m[34mSELECT  "time_sheets".* FROM "time_sheets" ORDER BY "time_sheets"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (392.7ms)
+Completed 200 OK in 445ms (Views: 397.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2023-09-18 12:06:01 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (139.0ms)
+Completed 200 OK in 155ms (Views: 145.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/comments" for ::1 at 2023-09-18 12:06:17 +0530
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (148.7ms)
+Completed 200 OK in 174ms (Views: 157.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/permissions" for ::1 at 2023-09-18 12:06:20 +0530
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions" WHERE "active_admin_permissions"."role" = ?[0m  [["role", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_permissions"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_permissions" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::Permission Load (0.8ms)[0m  [1m[34mSELECT  "active_admin_permissions".* FROM "active_admin_permissions" ORDER BY "active_admin_permissions"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveAdmin::ManagedResource Load (0.6ms)[0m  [1m[34mSELECT "active_admin_managed_resources".* FROM "active_admin_managed_resources" WHERE "active_admin_managed_resources"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 19], ["id", 18], ["id", 17], ["id", 16], ["id", 15], ["id", 14], ["id", 13], ["id", 12], ["id", 11], ["id", 10], ["id", 9], ["id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."action" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."action" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."name" FROM "active_admin_managed_resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "active_admin_managed_resources"."class_name" FROM "active_admin_managed_resources" ORDER BY "active_admin_managed_resources"."class_name" ASC[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (199.7ms)
+Completed 200 OK in 221ms (Views: 201.4ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/admin/time_sheets" for ::1 at 2023-09-18 12:06:24 +0530
+Processing by Admin::TimeSheetsController#index as HTML
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "time_sheets"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "time_sheets"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "time_sheets" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mTimeSheet Load (0.2ms)[0m  [1m[34mSELECT  "time_sheets".* FROM "time_sheets" ORDER BY "time_sheets"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (136.4ms)
+Completed 200 OK in 162ms (Views: 148.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2023-09-18 12:25:06 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (80.9ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2023-09-18 12:25:32 +0530
+  
+SyntaxError (/home/poolstak/active_admin_role_sample/app/admin/dashboard.rb:32: syntax error, unexpected keyword_end, expecting end-of-input
+  end # content
+  ^~~):
+  
+app/admin/dashboard.rb:32: syntax error, unexpected keyword_end, expecting end-of-input
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/admin/dashboard" for ::1 at 2023-09-18 12:26:43 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (72.9ms)
+Completed 200 OK in 101ms (Views: 74.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2023-09-18 12:29:21 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (97.0ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `with' for #<ActiveAdmin::Views::Pages::Page:0x00007f13dc6c2130>
+Did you mean?  within):
+    1: insert_tag active_admin_application.view_factory["page"]
+  
+app/admin/dashboard.rb:13:in `block (2 levels) in <top (required)>'
+Started GET "/admin/dashboard" for ::1 at 2023-09-18 12:29:33 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (83.6ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Post):
+    1: insert_tag active_admin_application.view_factory["page"]
+  
+app/admin/dashboard.rb:19:in `block (6 levels) in <top (required)>'
+app/admin/dashboard.rb:18:in `block (5 levels) in <top (required)>'
+app/admin/dashboard.rb:17:in `block (4 levels) in <top (required)>'
+app/admin/dashboard.rb:16:in `block (3 levels) in <top (required)>'
+app/admin/dashboard.rb:15:in `block (2 levels) in <top (required)>'
+Started GET "/admin/dashboard" for ::1 at 2023-09-18 12:29:41 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/poolstak/.rvm/gems/ruby-2.5.4/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (85.4ms)
+Completed 200 OK in 117ms (Views: 88.4ms | ActiveRecord: 1.2ms)
+
+
